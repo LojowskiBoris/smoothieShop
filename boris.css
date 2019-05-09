@@ -1,0 +1,26 @@
+
+
+#smoothies article img
+{
+    width: 100%;
+}
+
+#smoothies article h3
+{
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #9DD2D4;
+    border-left: 1px solid #9DD2D4;
+    border-right: 1px solid #9DD2D4;
+    font-family: 'Roboto', sans-serif;
+}
+
+#smoothies h2
+{
+    padding: 1rem;
+    text-align: center;
+    background-color: #FFD0D0;
+    color: white;
+    font-family: 'Luckiest Guy', cursive;
+    margin: 1rem;
+}
