@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy|Roboto');
+
+/* Section image*/
+.image-accueil{
+    background-image: url("Ressources/assets/photos/watermelon_smoothie.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.logo{
+    width: 7rem;
+}
+
+.nav ul{
+    display: flex;
+}
+
+.nav li{
+   padding: 2%;
+}
+
+.nav li:nth-child(3){
+    padding-top: 0;
+}
