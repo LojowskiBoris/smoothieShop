@@ -17,9 +17,9 @@ function fav(){
         url : 'favoris.php',
         method : 'post',
         dataType: 'json',
-        data : {userName:userName, productName:productName},
+        data : {productName:productName},
         success:function(data){
-
+            
         }
         });
 

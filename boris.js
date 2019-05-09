@@ -1,8 +1,6 @@
 let connected = false;
 
-
-
-function login()
+function sign_up(e)
 {
     e.preventDefault();
 
@@ -13,21 +11,34 @@ function login()
     } 
     else 
     {
-        let mdp = $("#mdp").val();
-
-        $.ajax({
-            url: 'php/sign.php',
-            method: 'POST',
-            dataType: 'json',
-            data: {mail: mail, mdp: mdp},
-            success: function(data){
-                
+        let pseudo = $("#pseudo").val();
+        if (pseudo){
+            let mdp = $("#mdp").val();
+            if(mdp)
+            {
+                $.ajax({
+                    url: 'boris.php',
+                    method: 'POST',
+                    dataType: 'json',
+                    data: {pseudo: pseudo, mail: mail, mdp: mdp},
+                    success: function(data){
+                        console.log(data);
+                    }
+                });
             }
-        });
+            else
+            {
+                $('<div class="alert alert-danger" role="alert">Veuillez saisir un mdp</div>').insertAfter($("#mdp"));
+            }
+        }
+        else{
+            $('<div class="alert alert-danger" role="alert">Veuillez saisir un pseudo</div>').insertAfter($("#pseudo"));
+        }
+
     }
 }
 
-function sign_up()
+function login(e)
 {
     e.preventDefault();
 
@@ -39,21 +50,36 @@ function sign_up()
     else 
     {
         let mdp = $("#mdp").val();
-
-        $.ajax({
-            url: 'php/sign.php',
-            method: 'POST',
-            dataType: 'json',
-            data: {mail: mail, mdp: mdp},
-            success: function(data){
-                
-            }
-        });
+        if(mdp)
+        {
+            $.ajax({
+                url: 'boris.php',
+                method: 'POST',
+                dataType: 'json',
+                data: {mail: mail, mdp: mdp},
+                success: function(data){
+                    console.log(data);
+                    if(!data.result)
+                    {
+                        $('<div class="alert alert-danger" role="alert">Identifiant ou mot de passe incorrect</div>').insertAfter($("#mdp"));
+                    }
+                    else
+                    {
+                        $(".alert").hide();
+                        console.log("redirection");
+                    }
+                }
+            });
+        }
+        else
+        {
+            $('<div class="alert alert-danger" role="alert">Veuillez saisir un mdp</div>').insertAfter($("#mdp"));
+        }
     }
 }
 
 $(document).ready(function()
 {
+    //$("#form-sign").on("submit",sign_up);
     $("#form-login").on("submit",login);
-    $("#form-join").on("submit",sign_up);
 });
