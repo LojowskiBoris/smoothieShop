@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Jeu 09 Mai 2019 à 10:15
+-- Généré le :  Jeu 09 Mai 2019 à 11:55
 -- Version du serveur :  5.7.26-0ubuntu0.16.04.1
 -- Version de PHP :  7.0.33-0ubuntu0.16.04.4
 
@@ -27,8 +27,8 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `favori` (
-  `Id_User` smallint(11) NOT NULL,
-  `Id_Product` smallint(11) NOT NULL
+  `Id_User` smallint(6) NOT NULL,
+  `Id_Product` smallint(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -40,7 +40,7 @@ CREATE TABLE `favori` (
 CREATE TABLE `product` (
   `Id` smallint(6) NOT NULL,
   `name` varchar(50) NOT NULL,
-  `ingredients` varchar(50) NOT NULL
+  `recette` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -52,8 +52,8 @@ CREATE TABLE `product` (
 CREATE TABLE `user` (
   `Id` smallint(6) NOT NULL,
   `pseudo` varchar(50) NOT NULL,
-  `mail` varchar(50) NOT NULL,
-  `password` varchar(50) NOT NULL
+  `mail` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -98,16 +98,11 @@ ALTER TABLE `user`
 --
 
 --
--- Contraintes pour la table `product`
+-- Contraintes pour la table `favori`
 --
-ALTER TABLE `product`
-  ADD CONSTRAINT `product_ibfk_1` FOREIGN KEY (`Id`) REFERENCES `favori` (`Id_Product`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Contraintes pour la table `user`
---
-ALTER TABLE `user`
-  ADD CONSTRAINT `user_ibfk_1` FOREIGN KEY (`Id`) REFERENCES `favori` (`Id_User`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `favori`
+  ADD CONSTRAINT `favori_ibfk_1` FOREIGN KEY (`Id_Product`) REFERENCES `product` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `favori_ibfk_2` FOREIGN KEY (`Id_User`) REFERENCES `user` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
