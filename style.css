@@ -8,6 +8,12 @@ body{
 .page-entiere{
     padding: 0;
 }
+a{
+    color:white;
+}
+ul {
+    list-style:none;
+}
 
 /* Section image + */
 .image-accueil{
@@ -188,6 +194,7 @@ h1{
     margin-top: 10%;
 }
 
+
 /*PAGE SE CONNECTER*/
 #imgContact{
 
@@ -196,10 +203,9 @@ h1{
 }
 
 
-#h1Connect{
+#h2Connect{
     color: #000000;
     font-family:Luckiest Guy;
-
     margin-bottom:10%;
 
 }
@@ -246,15 +252,7 @@ input{
 
 
 #formConnect {
-
-    width:40%;
-
-    margin-left:auto;
-
-    margin-right:auto;
-
     margin-bottom:20%;
-
 }
 
 
@@ -283,7 +281,31 @@ input{
     position: relative;
 
 }
-
+/*CONTACT*/
+#btnEnvoi{
+    margin-top:3%;
+    margin-bottom:-15%;
+    position: relative;
+    background-color: #ff9494;
+    border:1px solid #ff9494;
+    color:white;
+    width:50%;
+}
+.h2Contact{
+    display:inline-block;
+    padding:3%;
+    margin-bottom:3%;
+    margin-top:3%;
+    color:white;
+    font-family:Luckiest Guy;
+    background-color: #ffd0d0;
+    text-align:center;
+}
+.horaires{
+    border: 2px solid #ff9494;
+    padding:2%;
+    margin-bottom:2%;
+}
 /*FOOTER*/
 footer
 {
