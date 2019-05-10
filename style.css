@@ -1,15 +1,25 @@
-@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy|Roboto');
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 
-/* Section image*/
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.page-entiere{
+    padding: 0;
+}
+
+/* Section image + */
 .image-accueil{
     background-image: url("Ressources/assets/photos/watermelon_smoothie.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    height: 60rem;
 }
 
 .logo{
-    width: 7rem;
+    width: 10rem;
 }
 
 .nav ul{
@@ -22,4 +32,307 @@
 
 .nav li:nth-child(3){
     padding-top: 0;
+}
+
+h1{
+    color: aliceblue;
+    font-family: Luckiest Guy;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 5rem;
+    line-height: 9rem;
+    text-align: center;
+    margin-top: 12%;
+}
+
+.nav-link{
+    color: white;
+    font-size: 1.5rem;
+}
+
+.bouton-accueil{
+    text-align: center;
+    margin: auto;
+    width: 12rem;
+    font-size: 1.5rem;
+    color: white;
+    background: none;
+    display: block;
+    border : 2px solid white;
+    border-radius: 40px;
+    padding: 0.5%;
+    margin-top: 4%;
+}
+
+.bouton-accueil a{
+    color: white;
+}
+
+/*section Prem*/
+.p {
+
+    display:inline-block;
+
+    text-align:center;
+
+    background-color:#FFD0D0;
+
+    color:white;
+
+    padding:3%;
+
+    font-size: 1.5em;
+
+    font-family:Luckiest Guy;
+
+}
+
+
+
+#sectionPrem img{
+    width:60%; 
+}
+
+#sectionPrem{
+    margin-top: 5%;
+}
+
+/*section 3 boris*/
+#smoothies article img
+{
+    width: 100%;
+    height: 18.5rem;
+}
+
+#smoothies article h3
+{
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #9DD2D4;
+    border-left: 1px solid #9DD2D4;
+    border-right: 1px solid #9DD2D4;
+    font-family: 'Roboto', sans-serif;
+}
+
+#smoothies h2
+{
+    padding: 1rem;
+    text-align: center;
+    background-color: #FFD0D0;
+    color: white;
+    font-family: 'Luckiest Guy', cursive;
+    margin: 1rem;
+}
+
+#smoothies{
+    margin-top: 3%; 
+}
+
+.photos-filles{
+    margin-top: 3%;
+}
+
+
+/*section ou nous trouver*/
+#bouton-nous-trouver h2{
+    padding: 1rem;
+    text-align: center;
+    background-color: #FFD0D0;
+    color: white;
+    font-family: 'Luckiest Guy', cursive;
+    margin: 1rem;
+}
+
+#bouton-nous-trouver{
+    margin-top: 3%;
+}
+
+#nous-trouver div:first-child{
+    text-align: center;
+    width: 29.125rem;
+    height: 33.8125rem;
+    background: #C4C4C4;
+    margin: auto;
+}
+
+#nous-trouver h3{
+    margin-top: 35%;
+}
+
+#nous-trouver div:nth-child(2){
+    margin-top: 4%;
+}
+
+#nous-trouver{
+    margin-top: 4%;
+}
+
+/*section DIY*/
+#diy img{
+    max-width: 90%;
+}
+
+.bouton-diy{
+    padding: 1rem;
+    text-align: center;
+    background-color: #FFD0D0;
+    color: white;
+    margin: 1rem;
+    border-radius: 23px;
+    border: none;
+    width: 10rem;
+    margin-top: 2%; 
+}
+
+#diy p{
+    margin-top: 10%;
+}
+
+/*PAGE SE CONNECTER*/
+#imgContact{
+
+    width:80%;
+
+}
+
+
+#h1Connect{
+    color: #000000;
+    font-family:Luckiest Guy;
+
+    margin-bottom:10%;
+
+}
+
+
+
+.Connect{
+
+    border-radius:40px 40px 40px 40px;
+
+    padding:5%;
+
+
+}
+
+
+#formConnect button {
+
+    background-color: #ff9494;
+
+    border:1px solid #ff9494;
+
+    color:white;
+
+    width:50%;
+
+}
+
+input{
+
+    border:1px solid white;
+
+    margin:2%;
+
+    width:80%;
+
+}
+
+::placeholder{
+
+    color:#ff9494;
+
+}
+
+
+#formConnect {
+
+    width:40%;
+
+    margin-left:auto;
+
+    margin-right:auto;
+
+    margin-bottom:20%;
+
+}
+
+
+#divConnect {
+
+    background-color: #f8f8f8;
+
+    box-shadow: 0px 4px 4px #000000;
+  
+
+}
+
+
+#btnCreation{
+
+    margin-bottom:5%;
+
+}
+
+#btnConnect{
+
+    margin-top:3%;
+
+    margin-bottom:-15%;
+
+    position: relative;
+
+}
+
+/*FOOTER*/
+footer
+{
+    margin-top: 5%;    
+    background-color: #A4CDBF;
+    font-family: 'Luckiest Guy', cursive;
+    text-align: center;
+    padding: 3rem;
+}
+
+footer p:nth-child(1)
+{
+    color: #6D6C83;
+}
+
+footer p:nth-child(2)
+{
+    color: #ECCDC4;
+}
+
+footer #reseaux-sociaux a
+{
+    color: white;
+    text-decoration : none;
+    font-size: 3rem;
+    margin: 2rem;
+}
+
+footer #reseaux-sociaux a:hover
+{
+    text-decoration : none;
+    color: #6D6C83;
+}
+
+footer #reseaux-sociaux,footer #nav-footer
+{
+    margin-top: 2rem;
+}
+
+footer #nav-footer a
+{
+    color: white;
+    text-decoration : none;
+    font-size: 1rem;
+    margin: 1rem 1.5rem 0rem;
+}
+
+footer #nav-footer a:hover
+{
+    text-decoration : none;
+    color: #ECCDC4;
 }
