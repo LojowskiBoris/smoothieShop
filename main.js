@@ -1,4 +1,4 @@
-let connected = false;
+'use strict';
 
 function sign_up(e)
 {
@@ -13,11 +13,11 @@ function sign_up(e)
     {
         let pseudo = $("#pseudo").val();
         if (pseudo){
-            let mdp = $("#mdp").val();
+            let mdp = $("#password").val();
             if(mdp)
             {
                 $.ajax({
-                    url: 'boris.php',
+                    url: 'inscription.php',
                     method: 'POST',
                     dataType: 'json',
                     data: {pseudo: pseudo, mail: mail, mdp: mdp},
@@ -28,7 +28,7 @@ function sign_up(e)
             }
             else
             {
-                $('<div class="alert alert-danger" role="alert">Veuillez saisir un mdp</div>').insertAfter($("#mdp"));
+                $('<div class="alert alert-danger" role="alert">Veuillez saisir un mdp</div>').insertAfter($("#password"));
             }
         }
         else{
@@ -49,11 +49,11 @@ function login(e)
     } 
     else 
     {
-        let mdp = $("#mdp").val();
+        let mdp = $("#password").val();
         if(mdp)
         {
             $.ajax({
-                url: 'boris.php',
+                url: 'connexion.php',
                 method: 'POST',
                 dataType: 'json',
                 data: {mail: mail, mdp: mdp},
@@ -61,7 +61,7 @@ function login(e)
                     console.log(data);
                     if(!data.result)
                     {
-                        $('<div class="alert alert-danger" role="alert">Identifiant ou mot de passe incorrect</div>').insertAfter($("#mdp"));
+                        $('<div class="alert alert-danger" role="alert">Identifiant ou mot de passe incorrect</div>').insertAfter($("#password"));
                     }
                     else
                     {
@@ -80,6 +80,6 @@ function login(e)
 
 $(document).ready(function()
 {
-    //$("#form-sign").on("submit",sign_up);
-    $("#form-login").on("submit",login);
+    $("#formSignup").on("submit",sign_up);
+    $("#formConnect").on("submit",login);
 });

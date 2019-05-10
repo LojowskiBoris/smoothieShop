@@ -41,11 +41,17 @@ if(array_key_exists('pseudo',$_POST) && array_key_exists('mail',$_POST) && array
         ");
         $requete->execute([$pseudo,$mail,$mdp]);
         $idUser = $pdo->lastInsertId();
-            session_start();
-        $_SESSION['idUser'] = stripslashes(htmlspecialchars($idUser));
+        
+        session_start();
+        $_SESSION['idUser'] = $idUser;
         $result =['result' => true];
 
         
     }
     echo json_encode($result);
+}
+else
+{
+    $template = 'inscription';
+    include "layout.php";
 }
