@@ -1,4 +1,9 @@
 <?php
+<<<<<<< HEAD
+=======
+
+//CONNEXION
+>>>>>>> 98d96bc4cb7be1a5683fda85d8bc2fb1a71e7bb4
 function verifyPassword($password, $hashPassword)
 {
     return crypt($password, $hashPassword) == $hashPassword;
