@@ -1,6 +1,6 @@
 <?php
 
-//CONNECTION
+//CONNEXION
 function verifyPassword($password, $hashPassword)
 {
     return crypt($password, $hashPassword) == $hashPassword;
