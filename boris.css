@@ -1,26 +1,60 @@
-
-
-#smoothies article img
+nav
 {
-    width: 100%;
-}
-
-#smoothies article h3
-{
-    padding: 1rem;
-    text-align: center;
-    border-bottom: 1px solid #9DD2D4;
-    border-left: 1px solid #9DD2D4;
-    border-right: 1px solid #9DD2D4;
-    font-family: 'Roboto', sans-serif;
-}
-
-#smoothies h2
-{
-    padding: 1rem;
-    text-align: center;
-    background-color: #FFD0D0;
-    color: white;
     font-family: 'Luckiest Guy', cursive;
-    margin: 1rem;
 }
+nav img
+{
+    width : 8rem;
+}
+
+footer
+{
+    background-color: #A4CDBF;
+    font-family: 'Luckiest Guy', cursive;
+    text-align: center;
+    padding: 3rem;
+}
+
+footer p:nth-child(1)
+{
+    color: #6D6C83;
+}
+
+footer p:nth-child(2)
+{
+    color: #ECCDC4;
+}
+
+footer #reseaux-sociaux a
+{
+    color: white;
+    text-decoration : none;
+    font-size: 3rem;
+    margin: 2rem;
+}
+
+footer #reseaux-sociaux a:hover
+{
+    text-decoration : none;
+    color: #6D6C83;
+}
+
+footer #reseaux-sociaux,footer #nav-footer
+{
+    margin-top: 2rem;
+}
+
+footer #nav-footer a
+{
+    color: white;
+    text-decoration : none;
+    font-size: 1rem;
+    margin: 1rem 1.5rem 0rem;
+}
+
+footer #nav-footer a:hover
+{
+    text-decoration : none;
+    color: #ECCDC4;
+}
+
