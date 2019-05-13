@@ -1,8 +1,7 @@
 <?php
 
-<<<<<<< HEAD
 $template = "contact";
-include "layout.phtml";
+include "layout.php";
 
 // $retour = mail('issam.elalaoui85@gmail.com', 'Envoi depuis le site SmoothieMaker', $_POST['message'], 'From : webmaster@smoothiesmaker.fr');
 //     if ($retour) {
@@ -26,7 +25,3 @@ if (isset($message)) {
             return $envoiFail = '<p>Erreur lors l\'envoi de votre message.</p>';
     }
 }
-=======
-$template = 'contact';
-include "layout.php";
->>>>>>> 4f06790691f6b9a772b4c50b8af578388d3acb84
