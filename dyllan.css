@@ -5,6 +5,14 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+#favo{
+    background-image: url("img/smoothiepack.png");
+    height: 20rem;
+    background-position-y: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 5%;
+}
 .lien{
     background: #FF9494;
     border-radius: 42px;
