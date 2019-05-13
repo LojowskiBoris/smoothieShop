@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-	
-<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-    <link rel="stylesheet" href="style.css">
-    <title>SmoothieShop</title>
 
-
-</head>
 <body>
 <div class="container">
     <div class="row">
@@ -53,23 +41,17 @@
             <p>Souhaitez-vous nous écrire? Une suggestion? Remplissez le petit formulaire juste en dessous pour nous faire part de vos idées...</p>
 
         </div>
-
+        <div class="alert alert-danger" role="alert">
+            
+        </div>
         <div class="col-md-6 offset-md-3 col-sm-12 text-center" id="divConnect">
-            <form>
+            <form method="post" action="contact.php">
                 <input class="Connect" type="text" name="email" placeholder="Adresse mail">
                 <input class="Connect" type="textarea" name="message" placeholder="Commentaire">
                
                 <button type="submit" id="btnEnvoi" class="Connect">Envoyer</button>
             </form>
         </div>
-
-
-
     </div>
 </div>
-
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="JS/main.js"></script>
-
 </body>
-</html>
