@@ -22,7 +22,7 @@ function sign_up(e)
                     dataType: 'json',
                     data: {pseudo: pseudo, mail: mail, mdp: mdp},
                     success: function(data){
-                        console.log(data);
+                        windows.location.href='index.php';
                     }
                 });
             }
@@ -58,7 +58,6 @@ function login(e)
                 dataType: 'json',
                 data: {mail: mail, mdp: mdp},
                 success: function(data){
-                    console.log(data);
                     if(!data.result)
                     {
                         $('<div class="alert alert-danger" role="alert">Identifiant ou mot de passe incorrect</div>').insertAfter($("#password"));
@@ -66,7 +65,7 @@ function login(e)
                     else
                     {
                         $(".alert").hide();
-                        console.log("redirection");
+                        window.location.href='index.php';
                     }
                 }
             });

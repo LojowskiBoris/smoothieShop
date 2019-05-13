@@ -1,3 +1,4 @@
 <?php
 
-include "index.phtml";
+$template = 'index';
+include 'layout.php';

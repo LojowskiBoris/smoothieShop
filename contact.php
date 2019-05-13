@@ -1,3 +1,4 @@
 <?php
 
-include "contact.phtml";
+$template = 'contact';
+include "layout.php";

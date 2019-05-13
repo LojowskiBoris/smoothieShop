@@ -1,4 +1,4 @@
 <?php
 
 $template = 'recette';
-include 'layout.phtml';
+include 'layout.php';

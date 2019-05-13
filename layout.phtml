@@ -1,15 +1,12 @@
 <html>
 <head>
-	<title>Layout</title>
+	<title>Smoothies Shop</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="style.css">
-<<<<<<< HEAD
 	<link rel="stylesheet" href="boris.css">
-=======
 	<link rel="stylesheet" href="dyllan.css">
->>>>>>> 98d96bc4cb7be1a5683fda85d8bc2fb1a71e7bb4
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
@@ -17,61 +14,86 @@
 </head>
 <body>
 	<header>
-		
-		<nav class="navbar navbar-expand-sm navbar-light bg-light">
-			<a class="navbar-brand" href="#"><img src="img/logo.svg" alt=""></a>
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse text-right" id="navbarToggler">
-				<ul class="navbar-nav ml-auto mt-2 mt-lg-0 ">
-				<li class="nav-item">
-					<a class="nav-link" href="#">Accueil</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Smoothies</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Recettes</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Contact</a>
-				</li>
+		<?php if($template == 'index'):?>
+			<div class="container-fluid image-accueil">
+				<ul class="nav justify-content-center">
+					<li class="nav-item">
+						<a class="nav-link" href="smoothies.php">Smoothies</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="recette.php">Recettes</a>
+					</li class="nav-item">
+					<li class="nav-item">
+						<a class="nav-link" href="index.php"><img class="logo" src="Ressources/assets/logo/logoblanc.svg" alt="logo"></a>
+					</li>
+					<li class="nav-item">
+						<?php 
+						if($pseudo){echo("<a class='nav-link' href='deconnexion.php'>Deconnexion</a>");}
+						else {echo("<a class='nav-link' href='connexion.php'>Connexion</a>");}
+						?>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="contact.php">Contact</a>
+					</li>
 				</ul>
+				<h1>Bienvenue<br> Au Smooth Maker</h1>
+				<button class="bouton-accueil"><a href="#sectionPrem">Découvrir</a></button>
 			</div>
-		</nav>
-		<?php if($pseudo){echo("<p class='alert alert-success d-flex justify-content-around' id='bienvenue'>Bienvenue ".$pseudo['pseudo']."</p>");}?>
-	</header>
+			<?php else:?>	
+				<nav class="navbar navbar-expand-sm navbar-light bg-light">
+					<a class="navbar-brand" href="index.php"><img class="logo" src="img/logo.svg" alt=""></a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse text-right" id="navbarToggler">
+						<ul class="navbar-nav ml-auto mt-2 mt-lg-0 ">
+							<li class="nav-item">
+								<a class="nav-link" href="index.php">Accueil</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="smoothies.php">Smoothies</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="recette.php">Recettes</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="contact.php">Contact</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			<?php endif;?>
+			<?php if($pseudo){echo("<p class='alert alert-success d-flex justify-content-around' id='bienvenue'>Bienvenue ".$pseudo['pseudo']." !</p>");}?>
+		</header>
 
-	
-	<main>
-		<?php include $template.".phtml"?>
-	</main>
+		<main>
+			<?php include $template.".phtml"?>
+		</main>
 
 
-	<footer>
-		<p>Retrouvez-nous sur les réseaux sociaux</p>
-		<p>#SMOOTHMAKER</p>
-		<div id="reseaux-sociaux">
-			<a href="#"><i class="fab fa-facebook"></i></a>
-			<a href="#"><i class="fab fa-instagram"></i></a>
-			<a href="#"><i class="fab fa-twitter"></i></a>
-			<a href="#"><i class="fab fa-snapchat-ghost"></i></a>
-		</div>
-		<div id="nav-footer">
-			<a href="#">SMOOTHIES</a>
-			<a href="#">RECETTES</a>
-			<?php if($pseudo){echo("<a href='#'>DECONNEXION</a>");}else {
-				echo("<a href='#'>CONNEXION</a>");
-			}?>
-			<a href="#">CONTACT</a>
-		</div>
-	</footer>
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> 
-	<script src="main.js"></script>
+		<footer>
+			<p>Retrouvez-nous sur les réseaux sociaux</p>
+			<p>#SMOOTHMAKER</p>
+			<div id="reseaux-sociaux">
+				<a href="#"><i class="fab fa-facebook"></i></a>
+				<a href="#"><i class="fab fa-instagram"></i></a>
+				<a href="#"><i class="fab fa-twitter"></i></a>
+				<a href="#"><i class="fab fa-snapchat-ghost"></i></a>
+			</div>
+			<div id="nav-footer">
+				<a href="#">SMOOTHIES</a>
+				<a href="recette.php">RECETTES</a>
+				<?php if($pseudo){echo("<a href='deconnexion.php'>DECONNEXION</a>");}else {
+					echo("<a href='connexion.php'>CONNEXION</a>");
+				}?>
+				<a href="contact.php">CONTACT</a>
+			</div>
+		</footer>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> 
+		<script src="main.js"></script>
 
-	<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-</body>
-</html>
+		<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	</body>
+	</html>
