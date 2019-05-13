@@ -155,7 +155,7 @@ h1{
 
 #nous-trouver div:first-child{
     text-align: center;
-    width: 29.125rem;
+    max-width: 29.125rem;
     height: 33.8125rem;
     background: #C4C4C4;
     margin: auto;
@@ -306,6 +306,7 @@ input{
     padding:2%;
     margin-bottom:2%;
 }
+
 /*FOOTER*/
 footer
 {
