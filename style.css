@@ -40,6 +40,7 @@ ul {
     padding-top: 0;
 }
 
+
 h1{
     color: aliceblue;
     font-family: Luckiest Guy;
@@ -281,6 +282,93 @@ input{
     position: relative;
 
 }
+
+/*RECETTE DETAILS*/
+#recette-details
+{
+    padding: 0.5rem;
+}
+#recette-details button
+{
+    margin: 1rem auto 0;
+    background: #FF9494;
+    border-radius: 50px;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    font-family: Luckiest Guy;
+    padding-right:1rem; 
+}
+
+#recette-details button img
+{
+    width:2.5rem;
+    margin: 1rem;
+}
+
+#recette-details > img
+{
+    display: block;
+    width: 100%;
+    margin: 1.5rem auto 0;
+}
+
+#recette-details div div:nth-child(1)
+{
+    border: 3px solid #EDBE9E;
+    margin: 1.5rem;
+}
+
+
+#recette-details aside 
+{
+    margin:auto;
+} 
+
+#recette-details aside ul
+{
+    padding: 0;
+} 
+
+#recette-details aside li
+{
+    text-align: center;
+} 
+
+#recette-details section
+{
+   padding: 0 1rem;
+} 
+
+#recette-details h2
+{
+    display: inline-block;
+    padding:2rem 5rem;
+    margin: 2rem auto;
+    color:white;
+    font-family:Luckiest Guy;
+    background-color: #ffd0d0;
+    text-align:center;
+}
+
+#recette-details h3
+{
+    font-family: 'Roboto', sans-serif;
+} 
+
+#recette-details h4
+{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+} 
+
+#recette-details p
+{
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
 /*CONTACT*/
 #btnEnvoi{
     margin-top:3%;
