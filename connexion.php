@@ -1,6 +1,5 @@
 <?php
 
-//CONNECTION
 function verifyPassword($password, $hashPassword)
 {
     return crypt($password, $hashPassword) == $hashPassword;
@@ -23,9 +22,15 @@ if(array_key_exists('mail',$_POST) && array_key_exists('mdp',$_POST) && !empty($
     if(verifyPassword($_POST['mdp'],$mdp))
     {
         session_start();
-        $_SESSION['idUser'] = stripslashes(htmlspecialchars($user['Id']));
+        $_SESSION['idUser'] = $user['Id'];
         $result =['result' => true];
     }
     echo json_encode($result);
 }
+else
+{
+    $template = 'connexion';
+    include "layout.php";
+}
+
 

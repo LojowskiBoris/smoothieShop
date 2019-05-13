@@ -1,60 +1,24 @@
-<!DOCTYPE html>
-<html>
-<head>
-	
-<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
-    <link rel="stylesheet" href="style.css">
-    <title>SmoothieShop</title>
-
-
-</head>
-<body>
-	<div class="container">
+<div class="container">
     <div class="row">
-
-  
-<div class="col-12 text-center">
-    <img src="Ressources/assets/photos/national-smoothie.png" id="imgContact">
-</div>
-<div class="col-12 text-center">
-
-    <h1 id="h1Connect">Se connecter</h1>
-    <p >En vous connectant, vous pourrez accéder à votre liste de recette favorites et en ajouter de nouvelles à votre liste. Si vous n'avez pas de compte, vous pouvez en créer un gratuitement</p>
-    
-</div>
-
-<div class="col-12 text-center">
-
-   
-
-        <form id="formConnect">
-
-        <button type="submit" id="btnCreation" class="Connect">Créer un compte</button>
-
-<div class="" id="divConnect">
-        
-        <input class="Connect" type="text" name="mail" placeholder="Adresse mail">
-        <br>
-        <input class="Connect" type="password" name="password" placeholder="Mot de passe">
-        <br>
-        <button type="submit" id="btnConnect" class="Connect">Connexion</button>
-</div>
-        </form>
-    
-
+        <div class="col-12 text-center">
+            <img src="Ressources/assets/photos/national-smoothie.png" id="imgContact">
+        </div>
+        <div class="col-12 text-center">
+            <h1 id="h1Connect">Se connecter</h1>
+            <p >En vous connectant, vous pourrez accéder à votre liste de recette favorites et en ajouter de nouvelles à votre liste. Si vous n'avez pas de compte, vous pouvez en créer un gratuitement</p>
+        </div>
+        <div class="col-12 text-center">
+            <form id="formConnect">
+                <a href="inscription.php"><button type="button" id="btnCreation" class="Connect">Créer un compte</button></a>   
+                <div class="" id="divConnect">
+                    <input class="Connect" type="text" name="mail" id="mail" placeholder="Adresse mail">
+                    <br>
+                    <input class="Connect" type="password" name="password" id="password" placeholder="Mot de passe">
+                    <br>
+                    <button type="submit" id="btnConnect" class="Connect">Connexion</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
 
-
-
-</div>
-</div>
-
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-
-    <script src="JS/main.js"></script>
-
-</body>
-</html>

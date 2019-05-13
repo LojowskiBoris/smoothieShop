@@ -4,8 +4,6 @@ $(document).ready(function(){
     
 });
 
-
-
 function fav(){
 	var url = window.location.href; 
 	var myUrl = url.split("=");
