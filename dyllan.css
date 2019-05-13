@@ -32,3 +32,26 @@
     padding-right: 1%;
 }
 
+#smoothies article .panier{
+    position: absolute;
+    z-index: 1;
+    top:1%;
+    left:10%;
+    font-size: 2rem;
+    color: white;
+    font-family: Luckiest Guy;
+}
+#smoothies article .panier img{
+
+    width: 20%;
+    height: 15%;
+
+}
+#smoothies article .coeur{
+    position: absolute;
+    z-index: 1;
+    width: 10%;
+    height: 10%;
+    right: 5%;
+    top:5%;
+}
