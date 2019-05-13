@@ -419,6 +419,11 @@ input{
     margin-bottom:2%;
 }
 
+iframe
+{
+    width:100%;
+}
+
 /*FOOTER*/
 footer
 {
