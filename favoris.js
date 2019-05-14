@@ -22,7 +22,7 @@ $('.coeur').on('click',function(){
     {
         $(this).attr('src','Ressources/assets/icons/emptyheart.png');
         $.ajax({
-            url : 'add_favoris.php',
+            url : 'del_favoris.php',
             method : 'post',
             dataType: 'json',
             data : {productName:productName},
@@ -30,7 +30,6 @@ $('.coeur').on('click',function(){
                 
             }
         });
-
     }
     else
     {

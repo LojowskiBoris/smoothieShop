@@ -423,7 +423,14 @@ iframe
 {
     width:100%;
 }
-
+.lienRecette{
+    text-decoration: none;
+    color: black;
+}
+.lienRecette:hover{
+    text-decoration: none;
+    color: #ff9494;
+}
 /*FOOTER*/
 footer
 {

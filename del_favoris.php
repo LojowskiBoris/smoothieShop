@@ -21,7 +21,7 @@ $requete->execute([$productName]);
 $IdProduct = $requete->fetch();
 
 $requete = $pdo->prepare("
-INSERT INTO `favoris`(`Id_user`, `Id_product`) VALUES (?,?)
+DELETE FROM `favoris` WHERE `Id_user`=? AND`Id_product`=?
 ");
 
 $requete->execute([$IdUser, $IdProduct['Id']]);
