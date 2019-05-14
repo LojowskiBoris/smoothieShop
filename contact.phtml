@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-
-<body>
-=======
->>>>>>> 4f06790691f6b9a772b4c50b8af578388d3acb84
 <div class="container">
     <div class="row">
         <div class="col-12 text-center">
@@ -42,11 +37,19 @@
         <div class="col-md-8 offset-md-2 col-sm-12">
             
             <p>Souhaitez-vous nous écrire? Une suggestion? Remplissez le petit formulaire juste en dessous pour nous faire part de vos idées...</p>
-
+        
         </div>
+        <?php if($_POST):?>
+        <?php if($result == false):?>
         <div class="alert alert-danger" role="alert">
-            
+            Votre message n'a pas été envoyé
         </div>
+        <?php else:?>
+        <div class="alert alert-success">
+            Votre message a bien été transmis
+        </div>
+        <?php endif;?>
+        <?php endif;?>
         <div class="col-md-6 offset-md-3 col-sm-12 text-center" id="divConnect">
             <form method="post" action="contact.php">
                 <input class="Connect" type="text" name="email" placeholder="Adresse mail">
@@ -57,8 +60,3 @@
         </div>
     </div>
 </div>
-<<<<<<< HEAD
-</body>
-=======
-
->>>>>>> 4f06790691f6b9a772b4c50b8af578388d3acb84

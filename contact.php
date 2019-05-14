@@ -1,32 +1,27 @@
 <?php
+  
 
-<<<<<<< HEAD
-$template = "contact";
-include "layout.phtml";
-
-// $retour = mail('issam.elalaoui85@gmail.com', 'Envoi depuis le site SmoothieMaker', $_POST['message'], 'From : webmaster@smoothiesmaker.fr');
-//     if ($retour) {
-//         return $envoiOk = '<p>Votre message a été envoyé.</p>';
-//     }else{
-//         return $envoiFail = '<p>Erreur lors l\'envoi de votre message.</p>';
-//     }
-
+if($_POST){
+$from = $_POST['email']; // this is the sender's Email address
 $message = $_POST['message'];
-$mail = $_POST['email'];
+$position_arobase = strpos($from, '@');
+if ($position_arobase === false ) {
 
-if (isset($message)) {
-    $position_arobase = strpos($mail, '@');
-    if($position_arobase === false)
-        echo $mailIncorrect = '<p>Votre email est incorrect.</p>';
-    else {
-        $retour = mail('issam.elalaoui85@gmail.com','Envoi depuis le site SmoothieMaker', $message, 'From : ' . $mail);
-        if($retour)
-            return $envoiOk = '<p>Votre message a été envoyé.</p>';
-        else
-            return $envoiFail = '<p>Erreur lors l\'envoi de votre message.</p>';
+     return $result = false;
+}else{
+
+
+    $to = "ibrainpop@ibrainblog.com"; // this is your Email address
+
+    $headers = "From:" . $from;
+    mail($to,$message,$headers);
+    return $result = true;
+
+mail($to, $subject, $message, $headers);
+ 
     }
+    
 }
-=======
+var_dump($result);
 $template = 'contact';
 include "layout.php";
->>>>>>> 4f06790691f6b9a772b4c50b8af578388d3acb84
