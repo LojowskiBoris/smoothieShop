@@ -39,21 +39,23 @@
             <p>Souhaitez-vous nous écrire? Une suggestion? Remplissez le petit formulaire juste en dessous pour nous faire part de vos idées...</p>
         
         </div>
+        <div class="col-md-6 offset-md-3 col-sm-12 text-center">
         <?php if($_POST):?>
         <?php if($result == false):?>
-        <div class="alert alert-danger" role="alert">
-            Votre message n'a pas été envoyé
+        <div class="alert alert-danger text-center" role="alert">
+        Adresse mail incorrect <span>&#128543;</span>
         </div>
-        <?php else:?>
-        <div class="alert alert-success">
-            Votre message a bien été transmis
+        <?php else :?>
+        <div class="alert alert-success text-center">
+        Votre message a bien été envoyé <span>&#129297;</span>
         </div>
         <?php endif;?>
         <?php endif;?>
+        </div>
         <div class="col-md-6 offset-md-3 col-sm-12 text-center" id="divConnect">
             <form method="post" action="contact.php">
                 <input class="Connect" type="text" name="email" placeholder="Adresse mail">
-                <input class="Connect" type="textarea" name="message" placeholder="Commentaire">
+                <input class="Connect" type="textarea" name="message" placeholder="Message">
                
                 <button type="submit" id="btnEnvoi" class="Connect">Envoyer</button>
             </form>
