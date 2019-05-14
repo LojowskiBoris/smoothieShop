@@ -59,7 +59,7 @@ h1{
     font-family: Luckiest Guy;
     font-style: normal;
     font-weight: normal;
-    font-size: 5rem;
+    font-size: 3rem;
     line-height: 9rem;
     text-align: center;
     padding-top: 12%;
@@ -274,7 +274,7 @@ h1{
 
 .Connect{
     border-radius:40px 40px 40px 40px;
-    padding:5%;
+    padding:9%;
 }
 
 
@@ -282,7 +282,6 @@ h1{
     background-color: #ff9494;
     border:1px solid #ff9494;
     color:white;
-    width:50%;
 }
 
 input{
@@ -403,7 +402,9 @@ input{
 {
     font-family: 'Roboto', sans-serif;
 }
-
+ul{
+    padding:0;
+}
 
 
 /*CONTACT*/
@@ -413,7 +414,6 @@ input{
     background-color: #ff9494;
     border:1px solid #ff9494;
     color:white;
-    width: 20%;
     padding-top: 10px;
     padding-bottom: 10px;
 }
