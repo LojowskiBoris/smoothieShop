@@ -18,6 +18,9 @@ span{
 font-size: 2rem
 }
 
+.changeColor{
+     background-color: rgba(114, 53, 132, 0.3);
+}
 /* Section image + */
 .image-accueil{
     background-image: url("Ressources/assets/photos/watermelon_smoothie.jpg");
