@@ -19,7 +19,7 @@ font-size: 2rem
 }
 
 .changeColor{
-     background-color: rgba(114, 53, 132, 0.3);
+     background-color: rgba(173, 219, 219, 0.69);
 }
 /* Section image + */
 .image-accueil{
@@ -36,6 +36,13 @@ font-size: 2rem
 
 .nav ul{
     display: flex;
+}
+
+
+.nav{
+    width: 100%;
+    left: 0;
+    z-index: 1;
 }
 
 .nav li{
@@ -55,7 +62,7 @@ h1{
     font-size: 5rem;
     line-height: 9rem;
     text-align: center;
-    margin-top: 12%;
+    padding-top: 12%;
 }
 
 .nav-link{
