@@ -409,12 +409,13 @@ input{
 /*CONTACT*/
 #btnEnvoi{
     margin-top:3%;
-    margin-bottom:-15%;
     position: relative;
     background-color: #ff9494;
     border:1px solid #ff9494;
     color:white;
-    width:50%;
+    width: 20%;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 .h2Contact{
     display:inline-block;

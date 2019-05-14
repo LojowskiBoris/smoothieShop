@@ -21,9 +21,20 @@ $requete->execute([$productName]);
 $IdProduct = $requete->fetch();
 
 $requete = $pdo->prepare("
-INSERT INTO `favoris`(`Id_user`, `Id_product`) VALUES (?,?)
+SELECT `Id` FROM `favoris` WHERE `Id_user`=? AND`Id_product`=?
 ");
+$requete->execute([$IdUser,$IdProduct['Id']]);
+$favoris = $requete->fetch();
 
-$requete->execute([$IdUser, $IdProduct['Id']]);
+if(empty($favoris))
+{
+    $requete = $pdo->prepare("
+    INSERT INTO `favoris`(`Id_user`, `Id_product`) VALUES (?,?)
+    ");
+
+    $requete->execute([$IdUser, $IdProduct['Id']]);
+}
+
+
 
 
