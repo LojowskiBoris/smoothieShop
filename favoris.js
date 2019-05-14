@@ -18,6 +18,7 @@ function fav(){
 
 $('.coeur').on('click',function(){
     var productName =$(this).attr('id');
+    console.log(productName);
     if($(this).attr('src')=='Ressources/assets/icons/fullheart.png')
     {
         $(this).attr('src','Ressources/assets/icons/emptyheart.png');
