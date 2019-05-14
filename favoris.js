@@ -18,7 +18,6 @@ function fav(){
 
 $('.coeur').on('click',function(){
     var productName =$(this).attr('id');
-    console.log(productName);
     if($(this).attr('src')=='Ressources/assets/icons/fullheart.png')
     {
         $(this).attr('src','Ressources/assets/icons/emptyheart.png');
@@ -26,10 +25,7 @@ $('.coeur').on('click',function(){
             url : 'del_favoris.php',
             method : 'post',
             dataType: 'json',
-            data : {productName:productName},
-            success:function(data){
-                
-            }
+            data : {productName:productName}
         });
     }
     else
@@ -39,10 +35,7 @@ $('.coeur').on('click',function(){
             url : 'add_favoris.php',
             method : 'post',
             dataType: 'json',
-            data : {productName:productName},
-            success:function(data){
-                
-            }
+            data : {productName:productName}
         });
     }
     });
