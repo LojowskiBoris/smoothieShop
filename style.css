@@ -43,6 +43,7 @@ font-size: 2rem
     padding-top: 0;
 }
 
+
 h1{
     color: aliceblue;
     font-family: Luckiest Guy;
@@ -79,24 +80,14 @@ h1{
 
 /*section Prem*/
 .p {
-
     display:inline-block;
-
     text-align:center;
-
     background-color:#FFD0D0;
-
     color:white;
-
     padding:3%;
-
     font-size: 1.5em;
-
     font-family:Luckiest Guy;
-
 }
-
-
 
 #sectionPrem img{
     width:60%; 
@@ -107,11 +98,71 @@ h1{
 }
 
 /*section 3 boris*/
+#detox{
+    background-image: url("img/detox.jpg");
+    height: 20rem;
+    background-position-y: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#favo{
+    background-image: url("img/smoothiepack.png");
+    height: 20rem;
+    background-position-y: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 5%;
+}
+.lien{
+    background: #FF9494;
+    border-radius: 42px;
+    width: 150px;
+    height: 75px;
+}
+.lien a{
+    color: white;
+    font-family: Luckiest Guy;
+    font-size: 1rem;
+    line-height: 5rem;
+    text-align: center;
+    text-decoration: none;
+}
+.heart{
+    width: 10%;
+    padding-right: 1%;
+}
+
+#smoothies article .panier{
+    position: absolute;
+    z-index: 1;
+    top:1%;
+    left:10%;
+    font-size: 2rem;
+    color: white;
+    font-family: Luckiest Guy;
+}
+
+#smoothies article .panier img{
+    width: 20%;
+    height: 15%;
+
+}
+
+#smoothies article .coeur{
+    position: absolute;
+    z-index: 1;
+    width: 10%;
+    height: 10%;
+    right: 5%;
+    top:5%;
+    cursor: pointer;
+}
+
 #smoothies article img
 {
     width: 100%;
     height: 18.5rem;
-}
+} 
 
 #smoothies article h3
 {
@@ -197,93 +248,154 @@ h1{
     margin-top: 10%;
 }
 
-
 /*PAGE SE CONNECTER*/
 #imgContact{
-
     width:80%;
-
 }
 
 
-#h2Connect{
+#h1Connect{
     color: #000000;
     font-family:Luckiest Guy;
     margin-bottom:10%;
-
 }
 
 
 
 .Connect{
-
     border-radius:40px 40px 40px 40px;
-
     padding:5%;
-
-
 }
 
 
-#formConnect button {
-
+#formConnect button, #formSignup button{
     background-color: #ff9494;
-
     border:1px solid #ff9494;
-
     color:white;
-
     width:50%;
-
 }
 
 input{
-
     border:1px solid white;
-
     margin:2%;
-
     width:80%;
-
 }
 
 ::placeholder{
-
     color:#ff9494;
-
 }
 
 
-#formConnect {
+#formConnect,#formSignup {
+    width:40%;
+    margin-left:auto;
+    margin-right:auto;
     margin-bottom:20%;
 }
 
 
 #divConnect {
-
     background-color: #f8f8f8;
-
     box-shadow: 0px 4px 4px #000000;
-  
-
 }
 
 
 #btnCreation{
-
     margin-bottom:5%;
-
 }
 
 #btnConnect{
-
     margin-top:3%;
-
     margin-bottom:-15%;
-
     position: relative;
-
 }
+
+/*RECETTE DETAILS*/
+#recette-details
+{
+    padding: 0.5rem;
+}
+#recette-details button
+{
+    margin: 1rem auto 0;
+    background: #FF9494;
+    border-radius: 50px;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    font-family: Luckiest Guy;
+    padding-right:1rem; 
+}
+
+#recette-details button img
+{
+    width:2.5rem;
+    margin: 1rem;
+}
+
+#recette-details > img
+{
+    display: block;
+    width: 100%;
+    margin: 1.5rem auto 0;
+}
+
+#recette-details div div:nth-child(1)
+{
+    border: 3px solid #EDBE9E;
+    margin: 1.5rem;
+}
+
+
+#recette-details aside 
+{
+    margin:auto;
+} 
+
+#recette-details aside ul
+{
+    padding: 0;
+} 
+
+#recette-details aside li
+{
+    text-align: center;
+} 
+
+#recette-details section
+{
+   padding: 0 1rem;
+} 
+
+#recette-details h2
+{
+    display: inline-block;
+    padding:2rem 5rem;
+    margin: 2rem auto;
+    color:white;
+    font-family:Luckiest Guy;
+    background-color: #ffd0d0;
+    text-align:center;
+}
+
+#recette-details h3
+{
+    font-family: 'Roboto', sans-serif;
+} 
+
+#recette-details h4
+{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+} 
+
+#recette-details p
+{
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
 /*CONTACT*/
 #btnEnvoi{
     margin-top:3%;
@@ -308,6 +420,11 @@ input{
     border: 2px solid #ff9494;
     padding:2%;
     margin-bottom:2%;
+}
+
+iframe
+{
+    width:100%;
 }
 
 /*FOOTER*/

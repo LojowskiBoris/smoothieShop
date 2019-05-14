@@ -1,15 +1,7 @@
-$(document).ready(function(){
-
-     $('#coeur').on('click', fav);
-    
-});
 
 function fav(){
-	var url = window.location.href; 
-	var myUrl = url.split("=");
-	var userName = myUrl[1];
+
     var productName = $(this).parents('div').attr('id');
-   
 
     $.ajax({
         url : 'favoris.php',
@@ -23,3 +15,34 @@ function fav(){
 
 
 }
+
+$('.coeur').on('click',function(){
+    var productName =$(this).attr('id');
+    if($(this).attr('src')=='Ressources/assets/icons/fullheart.png')
+    {
+        $(this).attr('src','Ressources/assets/icons/emptyheart.png');
+        $.ajax({
+            url : 'add_favoris.php',
+            method : 'post',
+            dataType: 'json',
+            data : {productName:productName},
+            success:function(data){
+                
+            }
+        });
+
+    }
+    else
+    {
+        $(this).attr('src','Ressources/assets/icons/fullheart.png');
+        $.ajax({
+            url : 'add_favoris.php',
+            method : 'post',
+            dataType: 'json',
+            data : {productName:productName},
+            success:function(data){
+                
+            }
+        });
+    }
+    });
