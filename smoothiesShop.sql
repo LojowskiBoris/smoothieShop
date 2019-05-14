@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Jeu 09 Mai 2019 à 11:55
+-- Généré le :  Mar 14 Mai 2019 à 10:20
 -- Version du serveur :  5.7.26-0ubuntu0.16.04.1
 -- Version de PHP :  7.0.33-0ubuntu0.16.04.4
 
@@ -23,13 +23,21 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `favori`
+-- Structure de la table `favoris`
 --
 
-CREATE TABLE `favori` (
-  `Id_User` smallint(6) NOT NULL,
-  `Id_Product` smallint(6) NOT NULL
+CREATE TABLE `favoris` (
+  `Id` smallint(6) NOT NULL,
+  `Id_user` smallint(6) NOT NULL,
+  `Id_product` smallint(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Contenu de la table `favoris`
+--
+
+INSERT INTO `favoris` (`Id`, `Id_user`, `Id_product`) VALUES
+(7, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -42,6 +50,13 @@ CREATE TABLE `product` (
   `name` varchar(50) NOT NULL,
   `recette` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Contenu de la table `product`
+--
+
+INSERT INTO `product` (`Id`, `name`, `recette`) VALUES
+(1, 'pink_pleasure', 'fjsklfjldsf');
 
 -- --------------------------------------------------------
 
@@ -57,15 +72,25 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
+-- Contenu de la table `user`
+--
+
+INSERT INTO `user` (`Id`, `pseudo`, `mail`, `password`) VALUES
+(1, 'Dynozo', 'dynozo@gmail.com', '$2y$11$4396be979c84af742189eurtAxYRMolGM8RFxzws4kLyLRs3p9gEq');
+
+--
 -- Index pour les tables exportées
 --
 
 --
--- Index pour la table `favori`
+-- Index pour la table `favoris`
 --
-ALTER TABLE `favori`
-  ADD KEY `Id_User` (`Id_User`),
-  ADD KEY `Id_Product` (`Id_Product`);
+ALTER TABLE `favoris`
+  ADD PRIMARY KEY (`Id`),
+  ADD UNIQUE KEY `Id_user_2` (`Id_user`),
+  ADD UNIQUE KEY `Id_product_2` (`Id_product`),
+  ADD KEY `Id_user` (`Id_user`),
+  ADD KEY `Id_product` (`Id_product`);
 
 --
 -- Index pour la table `product`
@@ -84,25 +109,30 @@ ALTER TABLE `user`
 --
 
 --
+-- AUTO_INCREMENT pour la table `favoris`
+--
+ALTER TABLE `favoris`
+  MODIFY `Id` smallint(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+--
 -- AUTO_INCREMENT pour la table `product`
 --
 ALTER TABLE `product`
-  MODIFY `Id` smallint(6) NOT NULL AUTO_INCREMENT;
+  MODIFY `Id` smallint(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
-  MODIFY `Id` smallint(6) NOT NULL AUTO_INCREMENT;
+  MODIFY `Id` smallint(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- Contraintes pour les tables exportées
 --
 
 --
--- Contraintes pour la table `favori`
+-- Contraintes pour la table `favoris`
 --
-ALTER TABLE `favori`
-  ADD CONSTRAINT `favori_ibfk_1` FOREIGN KEY (`Id_Product`) REFERENCES `product` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `favori_ibfk_2` FOREIGN KEY (`Id_User`) REFERENCES `user` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `favoris`
+  ADD CONSTRAINT `favoris_ibfk_1` FOREIGN KEY (`Id_user`) REFERENCES `user` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `favoris_ibfk_2` FOREIGN KEY (`Id_product`) REFERENCES `product` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
