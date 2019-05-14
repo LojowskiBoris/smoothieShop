@@ -1,0 +1,499 @@
+@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.page-entiere{
+    padding: 0;
+}
+a{
+    color:white;
+}
+ul {
+    list-style:none;
+}
+span{
+font-size: 2rem
+}
+
+.changeColor{
+     background-color: rgba(173, 219, 219, 0.69);
+}
+/* Section image + */
+.image-accueil{
+    background-image: url("Ressources/assets/photos/watermelon_smoothie.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 60rem;
+}
+
+.logo{
+    width: 10rem;
+    
+}
+
+.nav ul{
+    display: flex;
+}
+
+
+.nav{
+    width: 100%;
+    left: 0;
+    z-index: 1;
+}
+
+.nav li{
+   padding: 2%;
+}
+
+.nav li:nth-child(3){
+    padding-top: 0;
+}
+
+
+h1{
+    color: aliceblue;
+    font-family: Luckiest Guy;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3rem;
+    line-height: 9rem;
+    text-align: center;
+    padding-top: 12%;
+}
+
+.nav-link{
+    color: white;
+    font-size: 1.5rem;
+}
+
+.bouton-accueil{
+    text-align: center;
+    margin: auto;
+    width: 12rem;
+    font-size: 1.5rem;
+    color: white;
+    background: none;
+    display: block;
+    border : 2px solid white;
+    border-radius: 40px;
+    padding: 0.5%;
+    margin-top: 4%;
+}
+
+.bouton-accueil a{
+    color: white;
+}
+
+/*section Prem*/
+.p {
+    display:inline-block;
+    text-align:center;
+    background-color:#FFD0D0;
+    color:white;
+    padding:3%;
+    font-size: 1.5em;
+    font-family:Luckiest Guy;
+}
+
+#sectionPrem img{
+    width:60%; 
+}
+
+#sectionPrem{
+    margin-top: 5%;
+}
+
+/*section 3 boris*/
+#detox{
+    background-image: url("img/detox.jpg");
+    height: 20rem;
+    background-position-y: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#favo{
+    background-image: url("img/smoothiepack.png");
+    height: 20rem;
+    background-position-y: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 5%;
+}
+.lien{
+    background: #FF9494;
+    border-radius: 42px;
+    width: 150px;
+    height: 75px;
+}
+.lien a{
+    color: white;
+    font-family: Luckiest Guy;
+    font-size: 1rem;
+    line-height: 5rem;
+    text-align: center;
+    text-decoration: none;
+}
+.heart{
+    width: 10%;
+    padding-right: 1%;
+}
+
+#smoothies article .panier{
+    position: absolute;
+    z-index: 1;
+    top:1%;
+    left:10%;
+    font-size: 2rem;
+    color: white;
+    font-family: Luckiest Guy;
+}
+
+#smoothies article .panier img{
+    width: 20%;
+    height: 15%;
+
+}
+
+#smoothies article .coeur{
+    position: absolute;
+    z-index: 1;
+    width: 10%;
+    height: 10%;
+    right: 5%;
+    top:5%;
+    cursor: pointer;
+}
+
+#smoothies article img
+{
+    width: 100%;
+    height: 18.5rem;
+} 
+
+#smoothies article h3
+{
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #9DD2D4;
+    border-left: 1px solid #9DD2D4;
+    border-right: 1px solid #9DD2D4;
+    font-family: 'Roboto', sans-serif;
+}
+
+h2
+{
+    padding: 1rem;
+    text-align: center;
+    background-color: #FFD0D0;
+    color: white;
+    font-family: 'Luckiest Guy', cursive;
+}
+
+#smoothies{
+    margin-top: 3%; 
+}
+
+.photos-filles{
+    margin-top: 3%;
+}
+
+
+/*section ou nous trouver*/
+#bouton-nous-trouver h2{
+    padding: 1rem;
+    text-align: center;
+    background-color: #FFD0D0;
+    color: white;
+    font-family: 'Luckiest Guy', cursive;
+    margin: 1rem;
+}
+
+#bouton-nous-trouver{
+    margin-top: 3%;
+}
+
+#nous-trouver div:first-child{
+    text-align: center;
+    max-width: 29.125rem;
+    height: 33.8125rem;
+    background: #C4C4C4;
+    margin: auto;
+}
+
+#nous-trouver h3{
+    margin-top: 35%;
+}
+
+#nous-trouver div:nth-child(2){
+    margin-top: 4%;
+}
+
+#nous-trouver{
+    margin-top: 4%;
+}
+
+/*section DIY*/
+#diy img{
+    max-width: 90%;
+}
+
+.bouton-diy{
+    padding: 1rem;
+    text-align: center;
+    background-color: #FFD0D0;
+    color: white;
+    margin: 1rem;
+    border-radius: 23px;
+    border: none;
+    width: 10rem;
+    margin-top: 2%; 
+}
+
+#diy p{
+    margin-top: 10%;
+}
+
+/*PAGE SE CONNECTER*/
+#imgContact{
+    width:80%;
+}
+
+
+#h1Connect{
+    color: #000000;
+    font-family:Luckiest Guy;
+    margin-bottom:10%;
+}
+
+
+
+.Connect{
+    border-radius:40px 40px 40px 40px;
+    padding:9%;
+}
+
+
+#formConnect button, #formSignup button{
+    background-color: #ff9494;
+    border:1px solid #ff9494;
+    color:white;
+}
+
+input{
+    border:1px solid white;
+    margin:2%;
+    width:80%;
+}
+
+::placeholder{
+    color:#ff9494;
+}
+
+
+#formConnect,#formSignup {
+    width:40%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:20%;
+}
+
+
+#divConnect {
+    background-color: #f8f8f8;
+    box-shadow: 0px 4px 4px #000000;
+}
+
+
+#btnCreation{
+    margin-bottom:5%;
+}
+
+#btnConnect{
+    margin-top:3%;
+    margin-bottom:-15%;
+    position: relative;
+}
+
+/*RECETTE DETAILS*/
+#recette-details
+{
+    padding: 0.5rem;
+}
+#recette-details button
+{
+    margin: 1rem auto 0;
+    background: #FF9494;
+    border-radius: 50px;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    font-family: Luckiest Guy;
+    padding-right:1rem; 
+}
+
+#recette-details button img
+{
+    width:2.5rem;
+    margin: 1rem;
+}
+
+#recette-details > img
+{
+    display: block;
+    width: 100%;
+    margin: 1.5rem auto 0;
+}
+
+#recette-details div div:nth-child(1)
+{
+    border: 3px solid #EDBE9E;
+    margin: 1.5rem;
+}
+
+
+#recette-details aside 
+{
+    margin:auto;
+} 
+
+#recette-details aside ul
+{
+    padding: 0;
+} 
+
+#recette-details aside li
+{
+    text-align: center;
+} 
+
+#recette-details section
+{
+   padding: 0 1rem;
+} 
+
+#recette-details h2
+{
+    display: inline-block;
+    padding:2rem 5rem;
+    margin: 2rem auto;
+    color:white;
+    font-family:Luckiest Guy;
+    background-color: #ffd0d0;
+    text-align:center;
+}
+
+#recette-details h3
+{
+    font-family: 'Roboto', sans-serif;
+} 
+
+#recette-details h4
+{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+} 
+
+#recette-details p
+{
+    font-family: 'Roboto', sans-serif;
+}
+ul{
+    padding:0;
+}
+
+
+/*CONTACT*/
+#btnEnvoi{
+    margin-top:3%;
+    position: relative;
+    background-color: #ff9494;
+    border:1px solid #ff9494;
+    color:white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.h2Contact{
+    display:inline-block;
+    padding:3%;
+    margin-bottom:3%;
+    margin-top:3%;
+    color:white;
+    font-family:Luckiest Guy;
+    background-color: #ffd0d0;
+    text-align:center;
+}
+.horaires{
+    border: 2px solid #ff9494;
+    padding:2%;
+    margin-bottom:2%;
+}
+
+iframe
+{
+    width:100%;
+}
+.lienRecette{
+    text-decoration: none;
+    color: black;
+}
+.lienRecette:hover{
+    text-decoration: none;
+    color: #ff9494;
+}
+/*FOOTER*/
+footer
+{
+    margin-top: 5%;    
+    background-color: #A4CDBF;
+    font-family: 'Luckiest Guy', cursive;
+    text-align: center;
+    padding: 3rem;
+}
+
+footer p:nth-child(1)
+{
+    color: #6D6C83;
+}
+
+footer p:nth-child(2)
+{
+    color: #ECCDC4;
+}
+
+footer #reseaux-sociaux a
+{
+    color: white;
+    text-decoration : none;
+    font-size: 3rem;
+    margin: 2rem;
+}
+
+footer #reseaux-sociaux a:hover
+{
+    text-decoration : none;
+    color: #6D6C83;
+}
+
+footer #reseaux-sociaux,footer #nav-footer
+{
+    margin-top: 2rem;
+}
+
+footer #nav-footer a
+{
+    color: white;
+    text-decoration : none;
+    font-size: 1rem;
+    margin: 1rem 1.5rem 0rem;
+}
+
+footer #nav-footer a:hover
+{
+    text-decoration : none;
+    color: #ECCDC4;
+}
