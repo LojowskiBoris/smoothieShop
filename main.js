@@ -22,7 +22,15 @@ function sign_up(e)
                     dataType: 'json',
                     data: {pseudo: pseudo, mail: mail, mdp: mdp},
                     success: function(data){
-                        windows.location.href='index.php';
+                        if(!data.result)
+                        {
+                            $('<div class="alert alert-danger" role="alert">Identifiant ou mot de passe incorrect</div>').insertAfter($("#password"));
+                        }
+                        else
+                        {
+                            $(".alert").hide();
+                            window.location.href='index.php';
+                        }
                     }
                 });
             }
