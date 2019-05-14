@@ -1,21 +1,20 @@
 <div id="recette-details">
-    <img src="img/pink_pleasure.jpg" alt="pink_pleasure">
+    <img src="<?=$produits['photos'];?>" alt="pink_pleasure">
     
     <div class="row justify-content-center">
-        <h2>PINK PLEASURE</h2>
+        <h2><?=$produits['name'];?></h2>
     </div>
 
     <div class="row justify-content-center align-items-stretch">
         <div class="col-sm-12 col-md-3 col-lg-3 d-flex justify-content-center">
             <aside id="ingredients">
                 <h4>Pour 2 personnes</h4>
+                <?php foreach ($ingredient as $ingredien) :?>
                 <ul>
-                    <li>100gr de framboises</li>
-                    <li>1 pomme</li>
-                    <li>2cl de citron vert</li>
-                    <li>20gr de glaçons</li>
-                    <li>20gr de myrtilles</li>
+                    <li><?=$ingredien;?></li>
+                    
                 </ul>
+                <?php endforeach;?>
             </aside>
         </div>
         <div class="col-sm-12 col-md-8 col-lg-8">

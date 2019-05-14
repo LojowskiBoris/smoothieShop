@@ -18,166 +18,36 @@
 </div>
 
 <section id="smoothies">
-            
-            <div class="row justify-content-around photos-filles">
-                <div class="col-sm-12 col-md-12 col-lg-4">
+<div class="row">
+
+<?php foreach($produits as $produit): ?>
+  <div class="col-sm-12 col-md-12 col-lg-4">
+  
                     <article>
+                    
                         <div class="fruits">
-                            <p class="panier">3 <img src="Ressources/assets/icons/fruits.png" alt="" ></p>
+                            <p class="panier">
+                            
+                        
+                        <?=count(explode(',' ,$produit['ingredients']));?>
+
+                            
+                            <img src="Ressources/assets/icons/fruits.png" alt="" ></p>
                             <?php if($allFavoris && in_array("pink_pleasure", $allFavoris)): ?>
                                 <img src="Ressources/assets/icons/fullheart.png" alt="" id="pink_pleasure" class="coeur">
                             <?php else: ?>
                                 <img src="Ressources/assets/icons/emptyheart.png" alt="" id="pink_pleasure" class="coeur">
                             <?php endif; ?>
-                            <img src="img/pink_pleasure.jpg" alt="Pink pleasure">
-                        </div>  
-                        <a href="recette_details.php" class="lienRecette"><h3><strong>Pink Pleasure</strong></h3></a>
-                    </article>
-                </div>
-                <div class="col-sm-12 col-md-12 col-lg-4">
-                    <article>
-                    <div class="fruits">
-                            <p class="panier">2 <img src="Ressources/assets/icons/fruits.png" alt="" ></p>
-                            <?php if($allFavoris && in_array("grey_pleasure", $allFavoris)): ?>
-                                <img src="Ressources/assets/icons/fullheart.png" alt="" id="grey_pleasure" class="coeur">
-                            <?php else: ?>
-                                <img src="Ressources/assets/icons/emptyheart.png" alt="" id="grey_pleasure" class="coeur">
-                            <?php endif; ?>
-                        <img src="img/grey_pleasure.jpg" alt="Grey pleasure">
-                    </div>
-                    <a href="recette_details.php" class="lienRecette"><h3><strong>Grey Pleasure</strong></h3></a>
-                    </article>
-                </div>
-                <div class="col-sm-12 col-md-12 col-lg-4">
-                    <article>
-                    <div class="fruits">
-                            <p class="panier">4 <img src="Ressources/assets/icons/fruits.png" alt="" ></p>
-                            <?php if($allFavoris && in_array("strawberry_passion", $allFavoris)): ?>
-                                <img src="Ressources/assets/icons/fullheart.png" alt="" id="strawberry_passion" class="coeur">
-                            <?php else: ?>
-                                <img src="Ressources/assets/icons/emptyheart.png" alt="" id="strawberry_passion" class="coeur">
-                            <?php endif; ?>
-                        <img src="img/strawberry_passion.jpg" alt="Strawberry passion">
-                    </div>
-                    <a href="recette_details.php" class="lienRecette"><h3><strong>Strawberry Passion</strong></h3></a>
-                    </article>
-                </div>
-            </div>
+                            <img src="<?=$produit['photos']?>" alt="Pink pleasure">
+                        </div>
 
-            <div class="row justify-content-around">
-                <div class="col-sm-12 col-md-12 col-lg-4">
-                    <article>
-                    <div class="fruits">
-                            <p class="panier">2 <img src="Ressources/assets/icons/fruits.png" alt="" ></p>
-                            <?php if($allFavoris && in_array("green_oxydant", $allFavoris)): ?>
-                                <img src="Ressources/assets/icons/fullheart.png" alt="" id="green_oxydant" class="coeur">
-                            <?php else: ?>
-                                <img src="Ressources/assets/icons/emptyheart.png" alt="" id="green_oxydant" class="coeur">
-                            <?php endif; ?>
-                        <img src="img/green_oxydant.jpg" alt="Green oxydant">
-                    </div>
-                    <a href="recette_details.php" class="lienRecette"><h3><strong>Green Oxydant</strong></h3></a>
+                        <a href="recette_details.php?produit=<?=$produit['Id']?>" class="lienRecette">
+                        <h3><strong><?=$produit['name']?></strong></h3>
+                        </a>
+                       
                     </article>
-                </div>
-                <div class="col-sm-12 col-md-12 col-lg-4">
-                    <article>
-                    <div class="fruits">
-                            <p class="panier">3 <img src="Ressources/assets/icons/fruits.png" alt="" ></p>
-                            <?php if($allFavoris && in_array("bubble_gum", $allFavoris)): ?>
-                                <img src="Ressources/assets/icons/fullheart.png" alt="" id="bubble_gum" class="coeur">
-                            <?php else: ?>
-                                <img src="Ressources/assets/icons/emptyheart.png" alt="" id="bubble_gum" class="coeur">
-                            <?php endif; ?>
-                        <img src="img/bubble_gum.jpg" alt="Bubble Gum">
-                    </div>
-                    <a href="recette_details.php" class="lienRecette"><h3><strong>Bubble Gum</strong></h3></a>
-                    </article>
-                </div>
-                <div class="col-sm-12 col-md-12 col-lg-4">
-                    <article>
-                    <div class="fruits">
-                            <p class="panier">3 <img src="Ressources/assets/icons/fruits.png" alt="" ></p>
-                            <?php if($allFavoris && in_array("orange_gourmandise", $allFavoris)): ?>
-                                <img src="Ressources/assets/icons/fullheart.png" alt="" id="orange_gourmandise" class="coeur">
-                            <?php else: ?>
-                                <img src="Ressources/assets/icons/emptyheart.png" alt="" id="orange_gourmandise" class="coeur">
-                            <?php endif; ?>
-                        <img src="img/orange_gourmandise.jpg" alt="Orange gourmandise">
-                    </div>
-                    <a href="recette_details.php" class="lienRecette"><h3><strong>Orange Gourmandise</strong></h3></a>
-                    </article>
-                </div>
-            </div>
-
-            
-            <div class="row justify-content-around photos-filles">
-                <div class="col-sm-12 col-md-12 col-lg-4">
-                    <article>
-                    <div class="fruits">
-                            <p class="panier">3 <img src="Ressources/assets/icons/fruits.png" alt="" ></p>
-                            <?php if($allFavoris && in_array("pink_lips", $allFavoris)): ?>
-                                <img src="Ressources/assets/icons/fullheart.png" alt="" id="pink_lips" class="coeur">
-                            <?php else: ?>
-                                <img src="Ressources/assets/icons/emptyheart.png" alt="" id="pink_lips" class="coeur">
-                            <?php endif; ?>
-                        <img src="img/smooth.jpg" alt="Pink pleasure">
-                    </div>
-                    <a href="recette_details.php" class="lienRecette"><h3><strong>Pink lips</strong></h3></a>
-                    </article>
-                </div>
-                <div class="col-sm-12 col-md-12 col-lg-4">
-                    <article>
-                    <div class="fruits">
-                            <p class="panier">5 <img src="Ressources/assets/icons/fruits.png" alt="" ></p>
-                            <img src="Ressources/assets/icons/emptyheart.png" alt=""  class="coeur">
-                        <img src="img/grey_pleasure.jpg" alt="Grey pleasure">
-                    </div>
-                    <a href="recette_details.php" class="lienRecette"><h3><strong>Grey fit</strong></h3></a>
-                    </article>
-                </div>
-                <div class="col-sm-12 col-md-12 col-lg-4">
-                    <article>
-                    <div class="fruits">
-                            <p class="panier">2 <img src="Ressources/assets/icons/fruits.png" alt="" ></p>
-                            <img src="Ressources/assets/icons/emptyheart.png" alt=""  class="coeur">
-                        <img src="img/strawberry_passion.jpg" alt="Strawberry passion">
-                    </div>
-                    <a href="recette_details.php" class="lienRecette"><h3><strong>Strawberry love</strong></h3></a>
-                    </article>
-                </div>
-            </div>
-
-            <div class="row justify-content-around">
-                <div class="col-sm-12 col-md-12 col-lg-4">
-                    <article>
-                    <div class="fruits">
-                            <p class="panier">3 <img src="Ressources/assets/icons/fruits.png" alt="" ></p>
-                            <img src="Ressources/assets/icons/emptyheart.png" alt=""  class="coeur">
-                        <img src="img/green_oxydant.jpg" alt="Green oxydant">
-                    </div>
-                    <a href="recette_details.php" class="lienRecette"><h3><strong>Green passion</strong></h3></a>
-                    </article>
-                </div>
-                <div class="col-sm-12 col-md-12 col-lg-4">
-                    <article>
-                    <div class="fruits">
-                            <p class="panier">5 <img src="Ressources/assets/icons/fruits.png" alt="" ></p>
-                            <img src="Ressources/assets/icons/emptyheart.png" alt=""  class="coeur">
-                        <img src="img/bubble_gum.jpg" alt="Bubble Gum">
-                    </div>
-                    <a href="recette_details.php" class="lienRecette"><h3><strong>Bubble trouble</strong></h3></a>
-                    </article>
-                </div>
-                <div class="col-sm-12 col-md-12 col-lg-4">
-                    <article>
-                    <div class="fruits">
-                            <p class="panier">4 <img src="Ressources/assets/icons/fruits.png" alt="" ></p>
-                            <img src="Ressources/assets/icons/emptyheart.png" alt=""  class="coeur">
-                        <img src="img/orange_gourmandise.jpg" alt="Orange gourmandise">
-                    </div>
-                    <a href="recette_details.php" class="lienRecette"><h3><strong>Orange sanguinolante</strong></h3></a>
-                    </article>
-                </div>
-            </div>
+    
+        </div>
+<?php endforeach; ?>
+</div>
 </section>
-
