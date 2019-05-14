@@ -1,34 +1,31 @@
 <?php
-
-<?php
 include "bdd_connection.php";
-
-$productName = $_POST['productName'];
-
-session_start();
+$template = 'recette';
+include 'layout.php';
 if(!isset($_SESSION['idUser']))
 {
-    $heart=false;
+    $IdProduct=false;
 }
 else
 {
     $IdUser = $_SESSION['idUser'];
 
     $requete = $pdo->prepare("
-    SELECT Id FROM `product` WHERE `name`= ?
+    SELECT `Id_product` FROM `favoris` WHERE `Id_user`=?
     ");
-
-    $requete->execute([$productName]);
-
-    $IdProduct = $requete->fetch();
-    
-    $requete = $pdo->prepare("
-    DELETE FROM `favoris` WHERE `Id_user`=? AND`Id_product`=?
-    ");
-    $requete->execute([$IdUser, $IdProduct['Id']]);
+    $requete->execute([$IdUser]);
+    $IdProduct = $requete->fetchAll();
 }
-
-
-
-$template = 'recette';
-include 'layout.php';
+if(empty($IdProduct))
+{
+    $IdProduct=false;
+}
+else
+{
+    $requete = $pdo->prepare("
+    SELECT `Id_product` FROM `favoris` WHERE `Id_user`=?
+    ");
+    $requete->execute([$IdUser]);
+    $IdProduct = $requete->fetchAll();
+}
+var_dump($IdProduct);
