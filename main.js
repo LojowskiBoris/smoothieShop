@@ -82,3 +82,14 @@ $(document).ready(function()
     $("#formSignup").on("submit",sign_up);
     $("#formConnect").on("submit",login);
 });
+
+$(function() {
+    $(window).scroll(function () {
+       if ($(this).scrollTop() > 960) {
+          $(".nav").addClass("changeColor")
+       }
+       if ($(this).scrollTop() < 960) {
+          $(".nav").removeClass("changeColor")
+       }
+    });
+ });
