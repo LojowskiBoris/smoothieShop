@@ -12,37 +12,37 @@
 </head>
 <body>
 	<header>
-		<?php if($template == 'index'):?>
-			<div class="container-fluid image-accueil">
-				<ul class="nav justify-content-center position-fixed">
-					<li class="nav-item">
-						<a class="nav-link" href="smoothies.php">Smoothies</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="recette.php">Recettes</a>
-					</li class="nav-item">
-					<li class="nav-item">
-						<a class="nav-link" href="index.php"><img class="logo" src="Ressources/assets/logo/logoblanc.svg" alt="logo"></a>
-					</li>
-					<li class="nav-item">
-						<?php 
-						if($pseudo){echo("<a class='nav-link' href='deconnexion.php'>Deconnexion</a>");}
-						else {echo("<a class='nav-link' href='connexion.php'>Connexion</a>");}
-						?>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="contact.php">Contact</a>
-					</li>
-				</ul>
-				<h1>Bienvenue<br> Au Smooth Maker</h1>
-				<button class="bouton-accueil"><a href="#sectionPrem">Découvrir</a></button>
-			</div>
-			<?php else:?>	
+	<?php if($template == 'index'):?>
+            <div class="container-fluid image-accueil">
+                <ul class="nav justify-content-center position-fixed">
+                    <li class="nav-item">
+                        <a class="nav-link" href="smoothies.php">Smoothies</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="recette.php">Recettes</a>
+                    </li class="nav-item">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.php"><img class="logo" src="Ressources/assets/logo/logoblanc.svg" alt="logo"></a>
+                    </li>
+                    <li class="nav-item">
+                        <?php
+                        if($pseudo){echo("<a class='nav-link' href='deconnexion.php'>Deconnexion</a>");}
+                        else {echo("<a class='nav-link' href='connexion.php'>Connexion</a>");}
+                        ?>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.php">Contact</a>
+                    </li>
+                </ul>
+                <h1>Bienvenue<br> Au Smooth Maker</h1>
+                <button class="bouton-accueil"><a href="#sectionPrem">Découvrir</a></button>
+            </div>
+            <?php else:?>
 				<nav class="navbar navbar-expand-sm navbar-light bg-light">
 					<a class="navbar-brand" href="index.php"><img class="logo" src="img/logo.svg" alt=""></a>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"></span>
-					</button>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
 					<div class="collapse navbar-collapse text-right" id="navbarToggler">
 						<ul class="navbar-nav ml-auto mt-2 mt-lg-0 ">
 							<li class="nav-item">
