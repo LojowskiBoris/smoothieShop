@@ -1,7 +1,5 @@
 <?php
 include "bdd_connection.php";
-$template = 'recette';
-include 'layout.php';
 if(!isset($_SESSION['idUser']))
 {
     $favoris=false;
@@ -37,4 +35,8 @@ else
         var_dump($favoris);
     }
 }
+$template = 'recette';
+include 'layout.php';
+
+
 
