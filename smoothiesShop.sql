@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Mar 14 Mai 2019 à 10:20
+-- Généré le :  Mar 14 Mai 2019 à 12:14
 -- Version du serveur :  5.7.26-0ubuntu0.16.04.1
 -- Version de PHP :  7.0.33-0ubuntu0.16.04.4
 
@@ -37,7 +37,8 @@ CREATE TABLE `favoris` (
 --
 
 INSERT INTO `favoris` (`Id`, `Id_user`, `Id_product`) VALUES
-(7, 1, 1);
+(2, 2, 2),
+(3, 2, 1);
 
 -- --------------------------------------------------------
 
@@ -47,16 +48,16 @@ INSERT INTO `favoris` (`Id`, `Id_user`, `Id_product`) VALUES
 
 CREATE TABLE `product` (
   `Id` smallint(6) NOT NULL,
-  `name` varchar(50) NOT NULL,
-  `recette` text NOT NULL
+  `name` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `product`
 --
 
-INSERT INTO `product` (`Id`, `name`, `recette`) VALUES
-(1, 'pink_pleasure', 'fjsklfjldsf');
+INSERT INTO `product` (`Id`, `name`) VALUES
+(2, 'grey_pleasure'),
+(1, 'pink_pleasure');
 
 -- --------------------------------------------------------
 
@@ -76,7 +77,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`Id`, `pseudo`, `mail`, `password`) VALUES
-(1, 'Dynozo', 'dynozo@gmail.com', '$2y$11$4396be979c84af742189eurtAxYRMolGM8RFxzws4kLyLRs3p9gEq');
+(1, 'Dynozo', 'dynozo@gmail.com', '$2y$11$4396be979c84af742189eurtAxYRMolGM8RFxzws4kLyLRs3p9gEq'),
+(2, 'Boris', 'boris@test.fr', '$2y$11$e38fc180d3a087441a943O61N7Y3EbBX0Ma7yP6OfL0kk2rPttjGO');
 
 --
 -- Index pour les tables exportées
@@ -87,8 +89,6 @@ INSERT INTO `user` (`Id`, `pseudo`, `mail`, `password`) VALUES
 --
 ALTER TABLE `favoris`
   ADD PRIMARY KEY (`Id`),
-  ADD UNIQUE KEY `Id_user_2` (`Id_user`),
-  ADD UNIQUE KEY `Id_product_2` (`Id_product`),
   ADD KEY `Id_user` (`Id_user`),
   ADD KEY `Id_product` (`Id_product`);
 
@@ -96,7 +96,8 @@ ALTER TABLE `favoris`
 -- Index pour la table `product`
 --
 ALTER TABLE `product`
-  ADD PRIMARY KEY (`Id`);
+  ADD PRIMARY KEY (`Id`),
+  ADD UNIQUE KEY `name` (`name`);
 
 --
 -- Index pour la table `user`
@@ -112,17 +113,17 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT pour la table `favoris`
 --
 ALTER TABLE `favoris`
-  MODIFY `Id` smallint(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `Id` smallint(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT pour la table `product`
 --
 ALTER TABLE `product`
-  MODIFY `Id` smallint(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `Id` smallint(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT pour la table `user`
 --
 ALTER TABLE `user`
-  MODIFY `Id` smallint(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `Id` smallint(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- Contraintes pour les tables exportées
 --
