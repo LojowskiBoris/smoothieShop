@@ -20,22 +20,34 @@ $('.coeur').on('click',function(){
     var productName =$(this).attr('id');
     if($(this).attr('src')=='Ressources/assets/icons/fullheart.png')
     {
-        $(this).attr('src','Ressources/assets/icons/emptyheart.png');
         $.ajax({
             url : 'del_favoris.php',
             method : 'post',
             dataType: 'json',
-            data : {productName:productName}
+            data : {productName:productName},
+            success:function(data){
+                if(!data.result)
+                {
+                   window.location.href='connexion.php';
+                }
+            }
         });
+        $(this).attr('src','Ressources/assets/icons/emptyheart.png');
     }
     else
     {
-        $(this).attr('src','Ressources/assets/icons/fullheart.png');
         $.ajax({
             url : 'add_favoris.php',
             method : 'post',
             dataType: 'json',
-            data : {productName:productName}
+            data : {productName:productName},
+            success:function(data){
+                if(!data.result)
+                {
+                   window.location.href='connexion.php';
+                }
+            }
         });
+        $(this).attr('src','Ressources/assets/icons/fullheart.png');
     }
     });
