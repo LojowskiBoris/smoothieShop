@@ -51,6 +51,28 @@ else
                 array_push($allFavoris,$favoris[$i]['name']);
             }
         }
+        if($template == 'favoris')
+        {
+
+$favoris ="";
+for($i=0;$i<count($allFavoris);$i++)
+{
+    $favoris .= '"';
+    $favoris .= $allFavoris[$i];
+    $favoris .= '",';
+}
+$favoris = substr($favoris, 0, -1);
+
+
+
+$query = ('SELECT * FROM `product` WHERE name IN (' . $favoris . ')');
+
+$requete = $pdo->prepare($query);
+$requete -> execute();
+
+$produit = $requete->fetchAll();
+
+        }
     }
 }
 

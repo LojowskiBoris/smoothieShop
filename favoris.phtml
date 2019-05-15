@@ -9,7 +9,30 @@
     </div>
     </div>
 
-    <div class="row justify-content-around">
-    <div class="col-sm-12 col-md-12 col-lg-3"></div>
-    </div>
+
+<section id="smoothies">
+<div class="row">
+
+<?php foreach($produit as $produits): ?>
+  <div class="col-sm-12 col-md-12 col-lg-4">
+  
+                    <article>
+                    
+                        <div class="fruits"> 
+                               
+                            <img src="<?=$produits['photos']?>" alt="Pink pleasure">
+                        </div> 
+
+                        <a href="recette_details.php?produit=<?=$produits['Id']?>" class="lienRecette">
+                        <h3><strong><?=$produits['name']?></strong></h3>
+                        </a>
+                       
+                    </article>
+    
+        </div>
+<?php endforeach; ?>
 </div>
+</section>
+
+</div>
+
