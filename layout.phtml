@@ -48,16 +48,13 @@
 				
             </div>
             <?php else:?>
-				<nav class="navbar navbar-expand-sm navbar-light bg-light">
+				<nav class="navbar navbar-expand-md navbar-light bg-light">
 					<a class="navbar-brand" href="index.php"><img class="logo" src="img/logo.svg" alt=""></a>
 						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
 							<span class="navbar-toggler-icon"></span>
 						</button>
 					<div class="collapse navbar-collapse text-center" id="navbarToggler">
 						<ul class="navbar-nav ml-auto mt-2 mt-lg-0 ">
-							<li class="nav-item">
-								<a class="nav-link" href="index.php">Accueil</a>
-							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="smoothies.php">Smoothies</a>
 							</li>
@@ -88,19 +85,35 @@
 		<footer>
 			<p>Retrouvez-nous sur les réseaux sociaux</p>
 			<p>#SMOOTHMAKER</p>
-			<div id="reseaux-sociaux">
-				<a href="https://fr-fr.facebook.com/"><i class="fab fa-facebook"></i></a>
-				<a href="https://www.instagram.com/?hl=fr"><i class="fab fa-instagram"></i></a>
-				<a href="https://twitter.com/login?lang=fr"><i class="fab fa-twitter"></i></a>
-				<a href="https://www.snapchat.com/l/fr-fr/download"><i class="fab fa-snapchat-ghost"></i></a>
+			<div id="reseaux-sociaux" class="row justify-content-center">
+				<div class="col col-md-2 mt-3">
+					<a href="https://fr-fr.facebook.com/"><i class="fab fa-facebook"></i></a>
+				</div>
+				<div class="col col-md-2 mt-3">
+					<a href="https://www.instagram.com/?hl=fr"><i class="fab fa-instagram"></i></a>
+				</div>
+				<div class="col col-md-2 mt-3">
+					<a href="https://twitter.com/login?lang=fr"><i class="fab fa-twitter"></i></a>
+				</div>
+				<div class="col col-md-2 mt-3">
+					<a href="https://www.snapchat.com/l/fr-fr/download"><i class="fab fa-snapchat-ghost"></i></a>
+				</div>
 			</div>
-			<div id="nav-footer">
-				<a href="#">SMOOTHIES</a>
-				<a href="recette.php">RECETTES</a>
-				<?php if($pseudo){echo("<a href='deconnexion.php'>DECONNEXION</a>");}else {
-					echo("<a href='connexion.php'>CONNEXION</a>");
-				}?>
-				<a href="contact.php">CONTACT</a>
+			<div id="nav-footer" class="row justify-content-center">
+				<div class="col col-sm-5 col-md-2 mt-3">
+					<a href="#">SMOOTHIES</a>
+				</div>
+				<div class="col col-sm-5 col-md-2 mt-3">
+					<a href="recette.php">RECETTES</a>
+				</div>
+				<div class="col col-sm-5 col-md-2 mt-3">
+					<?php if($pseudo){echo("<a href='deconnexion.php'>DECONNEXION</a>");}else {
+						echo("<a href='connexion.php'>CONNEXION</a>");
+					}?>
+				</div>
+				<div class="col col-sm-5 col-md-2 mt-3">
+					<a href="contact.php">CONTACT</a>
+				</div>
 			</div>
 		</footer>
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> 
