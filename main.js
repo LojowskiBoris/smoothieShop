@@ -94,10 +94,10 @@ $(document).ready(function()
 $(function() {
     $(window).scroll(function () {
        if ($(this).scrollTop() > 960) {
-          $(".navbar").addClass("changeColor")
+          $(".nav").addClass("changeColor")
        }
        if ($(this).scrollTop() < 960) {
-          $(".navbar").removeClass("changeColor")
+          $(".nav").removeClass("changeColor")
        }
     });
  });

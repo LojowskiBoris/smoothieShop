@@ -9,7 +9,7 @@ $requete -> execute();
 
 $produits = $requete->fetchAll();
 
-// $i=0;
+
 
 
 
