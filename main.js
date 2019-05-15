@@ -91,13 +91,14 @@ $(document).ready(function()
     $("#formConnect").on("submit",login);
 });
 
+
 $(function() {
     $(window).scroll(function () {
        if ($(this).scrollTop() > 960) {
-          $(".nav").addClass("changeColor")
+          $(".navbar").addClass("changeColor")
        }
        if ($(this).scrollTop() < 960) {
-          $(".nav").removeClass("changeColor")
+          $(".navbar").removeClass("changeColor")
        }
     });
  });
