@@ -13,91 +13,26 @@
 </div>
 
 <section id="smoothies">
-            <div class="row justify-content-around photos-filles">
-                <div class="col-sm-12 col-md-12 col-lg-4">
-                    <article>
-                        <img src="img/pink_pleasure.jpg" alt="Pink pleasure">
-                        <h3><strong>Pink Pleasure</strong></h3>
-                    </article>
-                </div>
-                <div class="col-sm-12 col-md-12 col-lg-4">
-                    <article>
-                        <img src="img/grey_pleasure.jpg" alt="Grey pleasure">
-                        <h3><strong>Grey Pleasure</strong></h3>
-                    </article>
-                </div>
-                <div class="col-sm-12 col-md-12 col-lg-4">
-                    <article>
-                        <img src="img/strawberry_passion.jpg" alt="Strawberry passion">
-                        <h3><strong>Strawberry Passion</strong></h3>
-                    </article>
-                </div>
-            </div>
+<div class="row">
 
-            <div class="row justify-content-around">
-                <div class="col-sm-12 col-md-12 col-lg-4">
+<?php foreach($produits as $produit): ?>
+  <div class="col-sm-12 col-md-12 col-lg-4">
+  
                     <article>
-                        <img src="img/green_oxydant.jpg" alt="Green oxydant">
-                        <h3><strong>Green Oxydant</strong></h3>
-                    </article>
-                </div>
-                <div class="col-sm-12 col-md-12 col-lg-4">
-                    <article>
-                        <img src="img/bubble_gum.jpg" alt="Bubble Gum">
-                        <h3><strong>Bubble Gum</strong></h3>
-                    </article>
-                </div>
-                <div class="col-sm-12 col-md-12 col-lg-4">
-                    <article>
-                        <img src="img/orange_gourmandise.jpg" alt="Orange gourmandise">
-                        <h3><strong>Orange Gourmandise</strong></h3>
-                    </article>
-                </div>
-            </div>
-</section>
+                    
+                        <div class="fruits"> 
+                               
+                            <img src="<?=$produit['photos']?>" alt="Pink pleasure">
+                        </div> 
 
-<section id="smoothies">
-            
-            <div class="row justify-content-around photos-filles">
-                <div class="col-sm-12 col-md-12 col-lg-4">
-                    <article>
-                        <img src="img/smooth.jpg" alt="Pink pleasure">
-                        <h3><strong>Pink lips</strong></h3>
+                        <a href="recette_details.php?produit=<?=$produit['Id']?>" class="lienRecette">
+                        <h3><strong><?=$produit['name']?></strong></h3>
+                        </a>
+                       
                     </article>
-                </div>
-                <div class="col-sm-12 col-md-12 col-lg-4">
-                    <article>
-                        <img src="img/grey_pleasure.jpg" alt="Grey pleasure">
-                        <h3><strong>Grey fit</strong></h3>
-                    </article>
-                </div>
-                <div class="col-sm-12 col-md-12 col-lg-4">
-                    <article>
-                        <img src="img/strawberry_passion.jpg" alt="Strawberry passion">
-                        <h3><strong>Strawberry love</strong></h3>
-                    </article>
-                </div>
-            </div>
-
-            <div class="row justify-content-around">
-                <div class="col-sm-12 col-md-12 col-lg-4">
-                    <article>
-                        <img src="img/green_oxydant.jpg" alt="Green oxydant">
-                        <h3><strong>Green passion</strong></h3>
-                    </article>
-                </div>
-                <div class="col-sm-12 col-md-12 col-lg-4">
-                    <article>
-                        <img src="img/bubble_gum.jpg" alt="Bubble Gum">
-                        <h3><strong>Bubble trouble</strong></h3>
-                    </article>
-                </div>
-                <div class="col-sm-12 col-md-12 col-lg-4">
-                    <article>
-                        <img src="img/orange_gourmandise.jpg" alt="Orange gourmandise">
-                        <h3><strong>Orange sanguinolante</strong></h3>
-                    </article>
-                </div>
-            </div>
+    
+        </div>
+<?php endforeach; ?>
+</div>
 </section>
 
