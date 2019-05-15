@@ -49,6 +49,7 @@ function sign_up(e)
 function login(e)
 {
     e.preventDefault();
+    $(".alert").remove();
 
     let mail = $("#mail").val();
     var reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -72,7 +73,6 @@ function login(e)
                     }
                     else
                     {
-                        $(".alert").hide();
                         window.location.href='index.php';
                     }
                 }

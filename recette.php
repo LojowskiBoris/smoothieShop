@@ -17,4 +17,25 @@ $template = 'recette';
 include 'layout.php';
 
 
+/*
+SELECT
+  *,
+  IF(
+    (
+      Id IN(
+      SELECT
+        Id_product
+      FROM
+        favoris
+      WHERE
+        Id_user = 4
+    )
+    ),
+    'true',
+    'false'
+  ) AS inFavoris
+FROM
+  `product`
+*/
+
 
