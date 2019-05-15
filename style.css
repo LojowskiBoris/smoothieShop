@@ -19,7 +19,7 @@ font-size: 2rem
 }
 
 .changeColor{
-     background-color: rgba(173, 219, 219, 0.69);
+     background-color: rgba(173, 219, 219, 0.9);
 }
 /* Section image + */
 .image-accueil{
@@ -30,9 +30,30 @@ font-size: 2rem
     height: 60rem;
 }
 
+.navbar-toggler i
+{
+    color:white;
+    font-size: 2rem;
+}
+
+.navigation
+{
+    position: fixed;
+    left: 0;
+    z-index:10;
+}
+
+.navigation li a
+{
+    color:white!important;
+}
+
+.logo-acceuil{
+    width: 10rem;
+}
+
 .logo{
     width: 10rem;
-    
 }
 
 .nav ul{
@@ -69,6 +90,11 @@ h1{
 .nav-link{
     color: white;
     font-size: 1.5rem;
+}
+
+.button-toggle
+{
+    color:black;
 }
 
 .bouton-accueil{
