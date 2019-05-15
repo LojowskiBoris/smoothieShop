@@ -17,7 +17,7 @@ else
     $requete->execute([$_SESSION['idUser']]);
     $pseudo = $requete->fetch();
 
-    if($template == 'recette')
+    if($template == 'recette' || $template == 'favoris')
     {
         $IdUser = $_SESSION['idUser'];
         $requete = $pdo->prepare("

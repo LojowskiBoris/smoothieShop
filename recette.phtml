@@ -32,10 +32,10 @@
 
                             
                             <img src="Ressources/assets/icons/fruits.png" alt="" ></p>
-                            <?php if($allFavoris && in_array("pink_pleasure", $allFavoris)): ?>
-                                <img src="Ressources/assets/icons/fullheart.png" alt="" id="pink_pleasure" class="coeur">
+                            <?php if($allFavoris && in_array($produit['name'], $allFavoris)): ?>
+                                <img src="Ressources/assets/icons/fullheart.png" alt="" id="<?=$produit['name']?>" class="coeur">
                             <?php else: ?>
-                                <img src="Ressources/assets/icons/emptyheart.png" alt="" id="pink_pleasure" class="coeur">
+                                <img src="Ressources/assets/icons/emptyheart.png" alt="" id="<?=$produit['name']?>" class="coeur">
                             <?php endif; ?>
                             <img src="<?=$produit['photos']?>" alt="Pink pleasure">
                         </div>
